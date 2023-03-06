@@ -676,7 +676,8 @@ UartEndpoint::UartEndpoint(std::string name)
 UartEndpoint::~UartEndpoint()
 {
     if (fd > 0) {
-        reset_uart(fd);
+    //disabling in this build for systems like NXP NAVQ+ that fail to reset onboard UART    
+        //reset_uart(fd);
     }
 }
 
